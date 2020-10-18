@@ -31,4 +31,4 @@ paris_to_insert = [
 atlas = MongoClient('mongodb+srv://1023924802:mc7JDPTtGzXHRdsy@cluster0.8smsh.mongodb.net/<ville>?retryWrites=true&w=majority')
 db = atlas.paris
 for paris in paris_to_insert:
-    db.paris.insert_one(paris)
+    db.station.insert_one(paris)

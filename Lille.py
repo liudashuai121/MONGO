@@ -31,4 +31,4 @@ lille_to_insert = [
 atlas = MongoClient('mongodb+srv://1023924802:mc7JDPTtGzXHRdsy@cluster0.8smsh.mongodb.net/<ville>?retryWrites=true&w=majority')
 db = atlas.lille
 for lille in lille_to_insert:
-    db.lille.insert_one(lille)
+    db.station.insert_one(lille)

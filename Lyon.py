@@ -36,4 +36,4 @@ lyon_to_insert = [
 atlas = MongoClient('mongodb+srv://1023924802:mc7JDPTtGzXHRdsy@cluster0.8smsh.mongodb.net/<ville>?retryWrites=true&w=majority')
 db = atlas.lyon
 for lyon in lyon_to_insert:
-    db.lyon.insert_one(lyon)
+    db.station.insert_one(lyon)

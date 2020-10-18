@@ -23,7 +23,7 @@ rennes_to_insert = [
             'dataset': 'Rennes',
             'id_ext': elem.get('fields', {}).get('idstation')
         },
-        'tpe': elem.get('fields', {}).get('etat', '') == 'En fonctionnement' # pas de TPE je vais le remplacer par l'état
+        'tpe': elem.get('fields', {}).get('etat', '') == 'En fonctionnement'
     }
     for elem in rennes
 ]
@@ -32,4 +32,4 @@ rennes_to_insert = [
 atlas = MongoClient('mongodb+srv://1023924802:mc7JDPTtGzXHRdsy@cluster0.8smsh.mongodb.net/<ville>?retryWrites=true&w=majority')
 db = atlas.rennes
 for rennes in rennes_to_insert:
-    db.rennes.insert_one(rennes)
+    db.station.insert_one(rennes)
