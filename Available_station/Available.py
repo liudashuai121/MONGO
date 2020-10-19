@@ -32,6 +32,7 @@ station_closest = db.station.find({
        }
      }
    }})[0]
+pprint(station_closest)
 try:
 	info = db.datas.find({"station_id" : station_closest["_id"],}).sort("data", DESCENDING).next()
 	pprint('NAME :'+station_closest['name'])
