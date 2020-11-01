@@ -34,6 +34,7 @@ while True:
 			"stand_availbale": elem.get('fields', {}).get('nbplacesdispo'),
 			"date": dateutil.parser.parse(elem.get('fields', {}).get('datemiseajour')),
 			"station_id": get_station_id(int(elem.get('fields', {}).get('libelle')))
+			"bike_availbale": elem.get('fields', {}).get('etat'),
 		}
 		for elem in vlilles
 	]
